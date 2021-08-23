@@ -6,7 +6,7 @@ def test_get_price():
     print(dis_price)
 
     assert dis_price['price'] > 0
-    assert dis_price['name'] == 'The Evil Corporation Mouse'
+    assert dis_price['name'] == 'The Walt Disney Company'
     assert dis_price['exchange'] == 'NYSE'
     assert dis_price['currency'] == 'USD'
 
