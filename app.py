@@ -21,6 +21,11 @@ def get_price(ticker):
 
     #print(result)
 
+    if r.status_code > 400:
+        app.logger.info(f"Problema de Yahoo con ticker: {ticker}.")
+        app.logger.info(f"Codigo Status Yahoo: {r.status_code}.")
+        return Response({}, status=404, mimetype='application/json')
+        
     app.logger.info(result)
 
     try:
