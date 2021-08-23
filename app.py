@@ -5,6 +5,7 @@ import logging
 
 app = Flask(__name__)
 
+logging.basicConfig(level=logging.DEBUG)
 #@app.route("/")
 #def hello_world():
 #    return "<p>Hello, World!</p>"
@@ -42,11 +43,12 @@ def get_price(ticker):
         }
         app.logger.info(result)
         #print(result)
+        
         return Response(json.dumps(result), status=200, mimetype='application/json')
     except (KeyError, TypeError):
         return Response({}, status=404, mimetype='application/json')
     except Exception as e:
-        app.logger.error("Exception occurred", exc_info=True)
+        app.logger.error("Excepcion ocurrida", exc_info=True)
 
 
 if __name__ == '_main_':
