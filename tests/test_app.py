@@ -5,10 +5,10 @@ def test_get_price():
     dis_price = get_price('DIS').json
     print(dis_price)
 
-    assert dis_price['price'] > 0
-    assert dis_price['name'] == 'The Walt Disney Company'
-    assert dis_price['exchange'] == 'NYSE'
-    assert dis_price['currency'] == 'USD'
+    assert dis_price['Precio'] > 0
+    assert dis_price['Nombre'] == 'The Walt Disney Company'
+    assert dis_price['Intercambio'] == 'NYSE'
+    assert dis_price['Moneda'] == 'USD'
 
     assert get_price('KSLAFSADF').status_code == 404
 
