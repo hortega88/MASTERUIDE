@@ -13,4 +13,4 @@ def test_get_price():
     assert get_price('KSLAFSADF').status_code == 404
 
 
-test_get_price()
+#test_get_price()
