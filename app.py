@@ -49,6 +49,5 @@ def get_price(ticker):
     except Exception as e:
         app.logger.error("Excepcion ocurrida", exc_info=True)
 
-
 if __name__ == '_main_':
     app.run()
