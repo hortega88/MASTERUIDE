@@ -13,12 +13,11 @@ logging.basicConfig(level=logging.DEBUG)
 @app.route("/get-price/<ticker>")
 
 def get_price(ticker):
-    
-url = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/DIS?modules=price%2CsummaryDetail%2CpageViews%2CfinancialsTemplate"
-headers={'User-Agent': 'Mozilla/5.0'}
-r = requests.get(url,headers=headers)
-print(r.status_code)
-result = r.json()
+    url = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/DIS?modules=price%2CsummaryDetail%2CpageViews%2CfinancialsTemplate"
+    headers={'User-Agent': 'Mozilla/5.0'}
+    r = requests.get(url,headers=headers)
+    print(r.status_code)
+    result = r.json()
 
     #print(result)
 
